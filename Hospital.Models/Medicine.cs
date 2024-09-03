@@ -10,7 +10,7 @@ namespace Hospital.Models
 {
     public class Medicine
     {
-        public int Id { get; set; }  // Primary key
+        public int Id { get; set; }  
 
         [MaxLength(80)]
         public string Name { get; set; }  

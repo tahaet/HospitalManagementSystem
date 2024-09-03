@@ -25,6 +25,8 @@ namespace Hospital.DataAccess.Repository.IRepository
 
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> entities);
+
+        Task<bool> Any(Expression<Func<T, bool>> filter);
         Task Save();
     }
 }

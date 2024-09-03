@@ -104,5 +104,10 @@ namespace Hospital.DataAccess.Repository
         {
             await _db.SaveChangesAsync();
         }
+
+        public async Task<bool> Any(Expression<Func<T, bool>> filter)
+        {
+            return await _dbSet.AnyAsync(filter);
+        }
     }
 }
