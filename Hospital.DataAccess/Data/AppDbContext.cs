@@ -1,13 +1,7 @@
 ﻿using Hospital.Models;
 using Hospital.Utility;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Hospital.DataAccess.Data
 {
@@ -37,6 +31,7 @@ namespace Hospital.DataAccess.Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<DoctorDetails>().Property(x => x.Gender).HasDefaultValue(SD.Gender.Male);
             modelBuilder.Entity<DoctorDetails>().Property(x => x.Duty).HasDefaultValue(SD.DayTime.Morning);
             modelBuilder.Entity<DoctorDetails>().Property(x => x.Days).HasDefaultValue(SD.Days.Monday);
@@ -53,5 +48,6 @@ namespace Hospital.DataAccess.Data
             modelBuilder.Entity<Prescription>().Property(x => x.DayTime).HasDefaultValue(SD.DayTime.Morning);
             modelBuilder.Entity<Expense>().Property(x => x.PaymentStatus).HasDefaultValue(SD.PaymentStatus.UnPaid);
         }
+        
     }
 }

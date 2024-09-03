@@ -12,7 +12,7 @@ namespace Hospital.Models
     {
         public int Id { get; set; }  
 
-        public string PatientId { get; set; }
+        public int PatientId { get; set; }
         
         [ForeignKey(nameof(PatientId))]
         public PatientDetails Patient { get; set; }  

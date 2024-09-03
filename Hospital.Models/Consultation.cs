@@ -12,7 +12,7 @@ namespace Hospital.Models
     {
         public int Id { get; set; }
 
-        public string PatientId { get; set; }
+        public int PatientId { get; set; }
 
         [ForeignKey(nameof(PatientId))]
         public PatientDetails Patient { get; set; }  
@@ -29,7 +29,7 @@ namespace Hospital.Models
 
         public bool Approved { get; set; } 
 
-        public string DoctorId { get; set; }
+        public int DoctorId { get; set; }
         
         [ForeignKey(nameof(DoctorId))]
         public DoctorDetails Doctor { get; set; }  
