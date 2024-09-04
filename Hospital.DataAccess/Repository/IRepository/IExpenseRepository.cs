@@ -10,5 +10,6 @@ namespace Hospital.DataAccess.Repository.IRepository
     public interface IExpenseRepository : IRepository<Expense>
     {
         void Update(Expense model);
+        Task<bool> UpdatePaymentStatus(int id , string PaymentStatus);
     }
 }

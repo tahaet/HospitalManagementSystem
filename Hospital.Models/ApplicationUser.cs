@@ -15,7 +15,7 @@ namespace Hospital.Models
         public string Name { get; set; }
 
         [MaxLength(500)]
-        public string About { get; set; }
+        public string? About { get; set; }
 
         public string? Details { get; set; } 
 

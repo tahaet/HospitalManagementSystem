@@ -4,10 +4,15 @@ using Hospital.Models.Dto.BuildingDto;
 using Hospital.Models.Dto.ConsultCategoryDto;
 using Hospital.Models.Dto.Department;
 using Hospital.Models.Dto.DesignationDto;
+using Hospital.Models.Dto.DoctorDetailsDto;
+using Hospital.Models.Dto.ExpenseDto;
 using Hospital.Models.Dto.FloorDto;
 using Hospital.Models.Dto.MedicineDTo;
+using Hospital.Models.Dto.PatientDetailsDto;
+using Hospital.Models.Dto.PrescriptionDto;
 using Hospital.Models.Dto.TestCategoryDto;
 using Hospital.Models.Dto.TreatmentDTo;
+using Hospital.Models.Dto.VaccineAppointmentDto;
 using Hospital.Models.Dto.VendorDto;
 
 namespace Hospital.APIs
@@ -44,6 +49,21 @@ namespace Hospital.APIs
 
                 config.CreateMap<Vendor, VendorCreateDto>().ReverseMap();
                 config.CreateMap<Vendor, VendorUpdateDto>().ReverseMap();
+
+                config.CreateMap<Expense, ExpenseCreateDto>().ReverseMap();
+                config.CreateMap<Expense, ExpenseUpdateDto>().ReverseMap();
+
+                config.CreateMap<DoctorDetails, DoctorCreateDto>().ReverseMap();
+                config.CreateMap<DoctorDetails, DoctorUpdateDto>().ReverseMap();
+
+                config.CreateMap<PatientDetails, PatientDetailsCreateDto>().ReverseMap();
+                config.CreateMap<PatientDetails, PatientDetailsUpdateDto>().ReverseMap();
+
+                config.CreateMap<Prescription, PrescriptionCreateDto>().ReverseMap();
+                config.CreateMap<Prescription, PrescriptionUpdateDto>().ReverseMap();
+
+                config.CreateMap<VaccineAppointment, VaccineAppointmentCreateDto>().ReverseMap();
+                config.CreateMap<VaccineAppointment, VaccineAppointmentUpdateDto>().ReverseMap();
             });
             return mappingConfig;
         }

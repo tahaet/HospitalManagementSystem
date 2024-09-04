@@ -58,5 +58,15 @@
 
         }
 
+        public static class Roles
+        {
+            public const string Admin = "admin";
+            public const string Employee = "employee";
+            public const string Doctor = "doctor";
+            public const string patient = "patient";
+            public const string nurse = "patient";
+
+        }
+
     }
 }
